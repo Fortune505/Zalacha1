@@ -5,8 +5,6 @@ class B
     static void Main()
     {
         BP.Lol();
-        BPL.Iga();
-        BPLA.Elllo();
     }
 }
 class BP
@@ -19,9 +17,8 @@ class BP
         Console.WriteLine("Напишите радиус круга:");
         string dannoKryg = Console.ReadLine();
         double r = Convert.ToDouble(dannoKryg);
-        const double pi = 3.14;
-        double SKv = a * a;
-        double SKr = r * r * pi;
+        double SKv = LogicBPLA.GetSKv(a);
+        double SKr = LogicBPLA.GetSKr(r);
         if (SKv > SKr)
         {
             Console.WriteLine("Площадь квадрата больше:");
@@ -34,5 +31,16 @@ class BP
         }
 
 
+    }
+}
+
+public class LogicBPLA
+{
+    public static double GetSKv(double a) => a * a;
+
+    public static double GetSKr(double r)
+    {
+        const double pi = 3.14;
+        return r * r * pi;
     }
 }
