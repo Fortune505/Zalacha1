@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+
 class B
 {
     static void Main()
