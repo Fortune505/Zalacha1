@@ -11,67 +11,67 @@ namespace TestProject2
         //}
 
         [Test]
-        public void TestGetSKv1()
+        public void GetSquareAreaTestOrdinaryNumber()
         {
             double a = 5;
             double ojid = 25;
 
-            double act = LogicBPLA.GetSKv(a);
+            double act = Logic.GetSquareArea(a);
 
             Assert.That(act, Is.EqualTo(ojid));
         }
 
         [Test]
-        public void TestGetSKr2()
+        public void GetCircleAreaTestOrdinaryNumber()
         {
             double r = 10;
             double ojid = 314;
-            double act = LogicBPLA.GetSKr(r);
+            double act = Logic.GetCircleArea(r);
 
             Assert.That(act, Is.EqualTo(ojid));
         }
 
         [Test]
-        public void TestGetSkvNole()
+        public void GetSquareAreaTestZeroNumber()
         {
             double a = 0;
             double ojid = 0;
 
-            double act = LogicBPLA.GetSKv(a);
+            double act = Logic.GetSquareArea(a);
 
             Assert.That(act, Is.EqualTo(ojid));
         }
 
         [Test]
-        public void TestGetSKvOtri()
+        public void GetSquareAreaTestNegativeNumber()
         {
             double a = -5;
             double ojid = 25;
 
-            double act = LogicBPLA.GetSKv(a);
+            double act = Logic.GetSquareArea(a);
 
             Assert.That(act, Is.EqualTo(ojid));
         }
 
         [Test]
-        public void TestGetSKrNole()
+        public void GetCircleAreaTestZeroNumber()
         {
 
             double r = 0;
             double ojid = 0;
-            double act = LogicBPLA.GetSKr(r);
+            double act = Logic.GetCircleArea(r);
 
             Assert.That(act, Is.EqualTo(ojid));
 
         }
 
         [Test]
-        public void TestGetSKrOtri()
+        public void GetCircleAreaTestNegativeNumber()
         {
 
             double r = -5;
             double ojid = 78.5;
-            double act = LogicBPLA.GetSKr(r);
+            double act = Logic.GetCircleArea(r);
 
             Assert.That(act, Is.EqualTo(ojid));
 

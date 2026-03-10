@@ -1,45 +1,45 @@
 ﻿using System;
 using System.ComponentModel;
 
-class B
+class MainProgram
 {
     static void Main()
     {
-        BP.Lol();
+        UserInterace.PrintMenu();
     }
 }
-class BP
+class UserInterace
 {
-    public static void Lol()
+    public static void PrintMenu()
     {
         Console.WriteLine("Напишите сторону квадрата:");
-        string dannoKvadro = Console.ReadLine();
-        double a = Convert.ToDouble(dannoKvadro);
+        string squareInput = Console.ReadLine();
+        double squareSide = Convert.ToDouble(squareInput);
         Console.WriteLine("Напишите радиус круга:");
-        string dannoKryg = Console.ReadLine();
-        double r = Convert.ToDouble(dannoKryg);
-        double SKv = LogicBPLA.GetSKv(a);
-        double SKr = LogicBPLA.GetSKr(r);
-        if (SKv > SKr)
+        string circleInput = Console.ReadLine();
+        double circleRadius = Convert.ToDouble(circleInput);
+        double areaSquare = Logic.GetSquareArea(squareSide);
+        double areaCircle = Logic.GetCircleArea(circleRadius);
+        if (areaSquare > areaCircle)
         {
             Console.WriteLine("Площадь квадрата больше:");
-            Console.WriteLine(SKv);
+            Console.WriteLine(areaSquare);
         }
         else
         {
             Console.WriteLine("Площадь круга больше:");
-            Console.WriteLine(SKr);
+            Console.WriteLine(areaCircle);
         }
 
 
     }
 }
 
-public class LogicBPLA
+public class Logic
 {
-    public static double GetSKv(double a) => a * a;
+    public static double GetSquareArea(double a) => a * a;
 
-    public static double GetSKr(double r)
+    public static double GetCircleArea(double r)
     {
         const double pi = 3.14;
         return r * r * pi;
