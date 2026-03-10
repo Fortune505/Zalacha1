@@ -14,43 +14,43 @@ namespace TestProject2
         public void GetSquareAreaTestOrdinaryNumber()
         {
             double a = 5;
-            double ojid = 25;
+            double expectedResult = 25;
 
-            double act = Logic.GetSquareArea(a);
+            double squareArea = Logic.GetSquareArea(a);
 
-            Assert.That(act, Is.EqualTo(ojid));
+            Assert.That(squareArea, Is.EqualTo(expectedResult));
         }
 
         [Test]
         public void GetCircleAreaTestOrdinaryNumber()
         {
             double r = 10;
-            double ojid = 314;
-            double act = Logic.GetCircleArea(r);
+            double expectedResult = 314;
+            double circleArea = Logic.GetCircleArea(r);
 
-            Assert.That(act, Is.EqualTo(ojid));
+            Assert.That(circleArea, Is.EqualTo(expectedResult));
         }
 
         [Test]
         public void GetSquareAreaTestZeroNumber()
         {
             double a = 0;
-            double ojid = 0;
+            double expectedResult = 0;
 
-            double act = Logic.GetSquareArea(a);
+            double squareArea = Logic.GetSquareArea(a);
 
-            Assert.That(act, Is.EqualTo(ojid));
+            Assert.That(squareArea, Is.EqualTo(expectedResult));
         }
 
         [Test]
         public void GetSquareAreaTestNegativeNumber()
         {
             double a = -5;
-            double ojid = 25;
+            double expectedResult = 25;
 
-            double act = Logic.GetSquareArea(a);
+            double squareArea = Logic.GetSquareArea(a);
 
-            Assert.That(act, Is.EqualTo(ojid));
+            Assert.That(squareArea, Is.EqualTo(expectedResult));
         }
 
         [Test]
@@ -58,10 +58,10 @@ namespace TestProject2
         {
 
             double r = 0;
-            double ojid = 0;
-            double act = Logic.GetCircleArea(r);
+            double expectedResult = 0;
+            double circleArea = Logic.GetCircleArea(r);
 
-            Assert.That(act, Is.EqualTo(ojid));
+            Assert.That(circleArea, Is.EqualTo(expectedResult));
 
         }
 
@@ -70,10 +70,10 @@ namespace TestProject2
         {
 
             double r = -5;
-            double ojid = 78.5;
-            double act = Logic.GetCircleArea(r);
+            double expectedResult = 78.5;
+            double circleArea = Logic.GetCircleArea(r);
 
-            Assert.That(act, Is.EqualTo(ojid));
+            Assert.That(circleArea, Is.EqualTo(expectedResult));
 
         }
     }
