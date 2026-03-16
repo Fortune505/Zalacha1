@@ -95,7 +95,7 @@ namespace TestProject2
 
         [TestCase(10, 314)]
         [TestCase(0, 0)]
-        [TestCase(25, 12.56)]
+        [TestCase(25, 1962.5)]
         public void GetCircleAreaTest(double r, double expectedResult)
         {
             double circleArea = Logic.GetCircleArea(r);
