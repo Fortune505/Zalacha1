@@ -37,11 +37,15 @@ class UserInterace
 
 public class Logic
 {
-    public static double GetSquareArea(double a) => a * a;
+    public static double GetSquareArea(double a) {
+        if (a < 0) throw new ArgumentException("Сторона не может быть меньше нуля");
+        return a * a;
+    }
 
     public static double GetCircleArea(double r)
     {
         const double pi = 3.14;
+        if (r < 0) throw new ArgumentException("Радиус не может быть меньше нуля");
         return r * r * pi;
     }
 }
