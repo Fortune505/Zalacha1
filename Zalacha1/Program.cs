@@ -5,10 +5,10 @@ class MainProgram
 {
     static void Main()
     {
-        UserInterace.PrintMenu();
+        UserInterface.PrintMenu();
     }
 }
-class UserInterace
+class UserInterface
 {
     public static void PrintMenu()
     {
@@ -20,15 +20,20 @@ class UserInterace
         double circleRadius = Convert.ToDouble(circleInput);
         double areaSquare = Logic.GetSquareArea(squareSide);
         double areaCircle = Logic.GetCircleArea(circleRadius);
-        if (areaSquare > areaCircle)
+        int result = Logic.CompareAreas(areaSquare, areaCircle);
+        if (result == 1)
         {
             Console.WriteLine("Площадь квадрата больше:");
             Console.WriteLine(areaSquare);
         }
-        else
+        else if (result == -1)
         {
             Console.WriteLine("Площадь круга больше:");
             Console.WriteLine(areaCircle);
+        } 
+        else {
+                Console.WriteLine("Площади равны:");
+                Console.WriteLine(areaSquare);
         }
 
 
@@ -48,4 +53,18 @@ public class Logic
         if (r < 0) throw new ArgumentException("Радиус не может быть меньше нуля");
         return r * r * pi;
     }
+
+        public static int CompareAreas(double a, double b) {
+            if (a > b)
+            {
+                return 1;
+            }
+            else if (a < b)
+            {
+                return -1;
+            }
+            else { 
+                return 0;
+            }
+        }
 }

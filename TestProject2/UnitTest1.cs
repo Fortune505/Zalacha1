@@ -107,9 +107,16 @@ namespace TestProject2
         public void GetCircleAreaNegativeInputThrowsArgumentExceptionTest()
         {
             Assert.Throws<ArgumentException>(() => Logic.GetCircleArea(-10));
+        }
 
+        [TestCase(100.5, 50.2, 1)]
+        [TestCase(20.0, 80.5, -1)]
+        [TestCase(50.0, 50.0, 0)]
+        public void CompareAreasTest(double a, double b, int expectedResult)
+        {
+            int actualResult = Logic.CompareAreas(a, b);
 
-
+            Assert.That(actualResult, Is.EqualTo(expectedResult));
         }
     }
 }
